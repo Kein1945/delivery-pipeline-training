@@ -9,14 +9,32 @@
 
     <!-- Bootstrap core CSS -->
     <link href="//maxcdn.bootstrapcdn.com/bootstrap/3.3.4/css/bootstrap.min.css" rel="stylesheet">
-
+    <style type="text/css">
+    @keyframes animatedBackground {
+      0% { background-position: 0 150px; }
+      10% { background-position: 0 0px; }
+      50% { background-position: 0 0px; }
+      80% { background-position: 0 150px; }
+      100% { background-position: 0 150px; }
+    }
+    #test {
+      height:200px;
+      width: 200px;
+      position: fixed;
+      bottom: 0;
+      left: 0;
+      background: url('ku.png') no-repeat 0 -25px;
+      animation: animatedBackground 4s linear infinite;
+      padding-left: 80px;
+    }
+    </style>
   </head>
 
   <body>
 
   <div class="container" ng-controller="CrudController">
-
-    <h1 style="background: url('ku.png') no-repeat 0 -25px; padding-left: 80px">Crud app</h1>
+  <div id="test"></div>
+    <h1 id="logoheader">Crud app</h1>
     <div class="row">
       <div class="col-sm-9">
         <h4>Simple CRUD</h4>
